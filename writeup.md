@@ -126,7 +126,13 @@ Here are six traffic signs that I found on the web:
 <img src="./IMAGES/image5.jpeg" width="100">
 <img src="./IMAGES/image6.jpeg" width="100">
 
+The first three images have a background of sky and are taken from a perspective of looking up at the sign.  This could prove difficult for the algorithm as most of the training images are taken on level with the sign.  Also the first image is not cropped around the sign and contains a second sign below it.  This could fool the algorithm.  
+The last image also has a small sign below it (in French!), but the main sign is quite distinctive and I think the algorithm should be able to recognize it.
+
+
 The analysis of these traffic signs begins from cell 19 in the notebook.
+
+
 
 Here are the results of the predictions:
 
@@ -140,7 +146,7 @@ Here are the results of the predictions:
 | Stop			          | Stop      						        	|
 | No entry             | No entry
 
-The model was correct on 4 of the 6 new images.  
+The model was correct on 4 of the 6 new images, thus had an accuracy of about 66%.  Although this is significantly less than the accuracy of the model on the test set, the sample size of new images is so small that is difficult to draw any conclusions from this.
 
 We can see the confidence of the model in its predictions by looking at the top 5 probabilities for each sign.
 
