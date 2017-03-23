@@ -1,4 +1,4 @@
-#**Traffic Sign Recognition** 
+# **Traffic Sign Recognition** 
 
 The goal of this project is to classify German Traffic Signs.  The dataset can be found [here](https://d17h27t6h515a5.cloudfront.net/topher/2017/February/5898cd6f_traffic-signs-data/traffic-signs-data.zip).  There are 43 categories 
 of traffic signs.  
@@ -13,7 +13,7 @@ We also include an html version of a [jupyter notebook](./Traffic_Sign_Classifie
 ## Rubric Points
 
 
-###Data Set Summary & Exploration
+### Data Set Summary & Exploration
 
 The code for this step is contained in the third code cell of the IPython notebook.  
 
@@ -90,7 +90,7 @@ My final model consisted of the following layers:
  
 
 
-####4. Training of the model
+#### 4. Training of the model
 
 The code for training the model is located in cells 63 and 24 of the notebook. 
 
@@ -105,7 +105,7 @@ It is interesting that the validation accuracy is actually higher than the test 
 
 In our experiments we noticed that continuing to train the best saved model using the Adam Optimizer with a lower rate of 0.0001 resulted in improved performance and we achieved a test set accuracy of 98.43% in this way.  This is not included in the notebook, however. 
 
-####5. The approach taken for finding a solution. 
+#### 5. The approach taken for finding a solution. 
 
 We began with the LeNet model.  It generalized well, but the training accuracy was not very high, thus we looked for a more powerful model.  We went to 3 convolutional blocks and also increased the number of filters in each block.  Based on the Sermanet and LeCun paper, we also fed all outputs from the convolutional blocks into the fully connected layer.  We then experimented with dropout in this model, and found it to improve performance.  We also found an initial 1x1 convolutional layer to map the RGB image to a single channel improved performance.  In the dense layer we settled with 512 neurons as this was better than 256 and 1024 did not seem to give improvement.  We also experimented with adding a second dense layer, but this did not yield improvement.  
 
@@ -113,7 +113,7 @@ In the future we would like to experiment with adding batch norm as well.
 
  
 
-###Test Model on New Images
+### Test Model on New Images
 
 
 Here are six traffic signs that I found on the web:
@@ -159,6 +159,6 @@ From cell 16 in the notebook, we visualize the outputs of the first 3x3 convolut
 <img src="./IMAGES/activations.png" align="middle" height="100">
 
 
-Finally, from cell 59 we looked at average activations (after ReLu) of the first and second 3x3 convolutions over all images in the test set.  We can see that there are a few filters that are hardly ever activated.  It was interesting to me that this occurred at a filter level---i.e., if a filter was active in a certain region of an image, it was generally active to some degree throughout the image.  On the other hand, there were some "dud" filters that were essentially inactive everywhere for all images.  Here is an example of a filter in the second 3x3 convolutional layer that is hardly ever active.
+Finally, from cell 59 we looked at average activations (after ReLu) of the first and second 3x3 convolutions over all images in the test set.  We can see that there are a few filters that are hardly ever activated.  It was interesting to me that this occurred at a filter level---i.e., if a filter was active in a certain region of an image, it was generally active to some degree throughout the image.  On the other hand, there were some "dud" filters that were essentially inactive everywhere for all images.  Here is an example of a filter in the second 3x3 convolutional layer that is hardly ever active (the image represents the average activation over all test images).
 
 <img src="./IMAGES/dead_filter.png" align="middle" width="300">
