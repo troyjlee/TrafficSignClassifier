@@ -58,7 +58,7 @@ After contrast stretching, we just did the simple transformation
 
 #### Data Augmentation
 
-As described above, we enlarged the data set by flipping images vertically, horizontally, diagonally, etc. if doing so resulted in another meaningful sign.  This enlarged the dataset to 67198.  We also created an "infinite" data set as in each epoch we randomly perturbed every image in the training set: we randomly rotated it up to 10 degrees, translated it, rescaled it, added perspective distortion, and modified the brightness.  This is done in the `jitter` function in cell 23.
+As described above, we enlarged the data set by flipping images vertically, horizontally, diagonally, etc. if doing so resulted in another meaningful sign.  This enlarged the dataset to 67198 images.  In each epoch we randomly perturbed every image in the training set: we randomly rotated it up to 10 degrees, translated it, rescaled it, added perspective distortion, and modified the brightness.  This is done in the `jitter` function in cell 23.
 
 <img src="./IMAGES/jitter.png" height="100">
 
