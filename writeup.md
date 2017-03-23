@@ -7,7 +7,7 @@ Our main code is contained in two files [augment_data.py](./augment_data.py) and
 
 The file `layers.py` contains our preprocessing steps, model definition, and trains the model.
 
-We also include an html version of a [jupyter notebook](./Traffic_Sign_Classifier.html) with all the steps of our process.
+We also include a [jupyter notebook](./Traffic_Sign_Classifier.ipynb) with all the steps of our process.
 
 
 ## Rubric Points
@@ -15,7 +15,8 @@ We also include an html version of a [jupyter notebook](./Traffic_Sign_Classifie
 
 ### Data Set Summary & Exploration
 
-The code for this step is contained in the third code cell of the IPython notebook.  
+The code for this step is contained in the third code cell of the notebook.  
+**Note:** all cell numbers refer to the html version of the notebook.
 
 * The size of training set is 34799
 * The size of test set is 12630
